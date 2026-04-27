@@ -1,0 +1,40 @@
+const handleError = (message) => {
+  document.getElementById('errorMessage').textContent = message;
+  //domo is now plan
+  document.getElementById('justMessage').classList.remove('hidden');
+};
+
+const sendPost = async (url, data,handler) => {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+
+  const result = await response.json();
+   document.getElementById('justMessage').classList.remove('hidden');
+
+  if(result.redirect) {
+    window.location = result.redirect;
+  }
+
+  if(result.error) {
+    handleError(result.error);
+  }
+
+  if(handler) {
+    handler(result);
+  }
+};
+
+const hideError = () => {
+     document.getElementById('justMessage').classList.remove('hidden');
+};
+
+module.exports = {
+    handleError,
+    sendPost,
+    hideError,
+};
