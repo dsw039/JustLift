@@ -11,8 +11,9 @@ const PlanSchema = new mongoose.Schema({
         set: setName,
     },
     type: {
-        type: Number,
-        min: 0,
+        //True/1 means the type is exercise while False/0 means the type is meal
+        type: Boolean,
+        default: 1,
         required: true,
     },
     owner: {
@@ -20,6 +21,10 @@ const PlanSchema = new mongoose.Schema({
         required: true,
         ref: 'Account',
     },
+    /*isPremium: {
+        type: mongoose.Schema.Premium,
+        ref: 'Account'
+    },*/
     createdDate: {
         type: Date,
         default: Date.now,

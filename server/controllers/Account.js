@@ -25,9 +25,11 @@ const login = (req, res) => {
         }
 
         req.session.account = Account.toAPI(account);
-
+        console.log(account.premium);
         return res.json({ redirect: '/maker' });
     });
+
+    
 };
 
 const signup = async (req, res) => {

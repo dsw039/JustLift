@@ -1,6 +1,6 @@
 const handleError = (message) => {
   document.getElementById('errorMessage').textContent = message;
-  //domo is now plan
+  
   document.getElementById('justMessage').classList.remove('hidden');
 };
 

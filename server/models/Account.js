@@ -37,6 +37,20 @@ const AccountSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  premium: {
+    type: Boolean,
+    required: true,
+    default: false
+  },
+  mPlanCount: {
+    type: Number,
+    default: 0,
+  },
+  lPlanCount: {
+    type: Number,
+    default: 0.
+  },
+
 });
 
 // Converts a doc to something we can store in redis later on.
@@ -71,6 +85,8 @@ AccountSchema.statics.authenticate = async (username, password, callback) => {
     return callback(err);
   }
 };
+
+//AccountSchema.statics.isPremium = async ()
 
 AccountModel = mongoose.model('Account', AccountSchema);
 module.exports = AccountModel;

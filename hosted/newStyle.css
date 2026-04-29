@@ -1,0 +1,180 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #181818;
+    color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+nav {
+    width: 100%;
+    height: 55px;
+    background-color: #252525;
+    border-bottom: 2px solid #333;
+}
+
+.navlink {
+    float: left;
+    padding: 15px 20px;
+    font-size: 1.1em;
+}
+
+.navlink a {
+    color: white;
+}
+
+.navlink a:hover {
+    color: #f2951c;
+}
+
+
+
+.planForm{
+    background-color: #252525;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px auto;
+    width: 600px;
+}
+.mainForm {
+    background-color: #252525;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px auto;
+    width: 400px;
+}
+
+.mainForm h3 {
+    text-align: center;
+}
+
+.mainForm label {
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+
+.planForm label{
+    color: #f2f2f2;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.mainForm label {
+    color: #f2f2f2;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+input{
+    padding: 8px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #111;
+    color: white;
+    margin-right: 10px;
+}
+select {
+    padding: 8px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #111;
+    color: white;
+    margin-right: 10px;
+}
+
+
+
+
+.formSubmit {
+    background-color: #e85805;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.makePlanSubmit {
+    background-color: #e85805;
+    color: black;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+
+
+#errorMessage {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+#plans {
+    width: 50%;
+    min-width: 400px;
+    margin: 60px auto;
+}
+
+
+
+
+.liftPlan {
+    background-color: #f2951c;
+    border: 2px solid #554635;
+    width: 95%;
+    margin: 12px auto;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 60px;
+    overflow: hidden;
+}
+
+.mealPlan {
+    background-color: #f71814;
+    border: 2px solid #3a2323;
+    width: 95%;
+    margin: 12px auto;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 60px;
+    overflow: hidden;
+}
+
+
+
+
+.hidden {
+    display: none;
+}
+
+img.planFace {
+    margin-left: 25px;
+    margin-right: 10px;
+    height: 75px;
+    width: 75px;
+    border-radius: 4px;
+    margin-top:10px;
+    float:left;
+}

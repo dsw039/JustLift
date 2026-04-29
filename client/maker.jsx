@@ -33,7 +33,10 @@ const PlanForm = (props) => {
                 <label htmlFor="name">Name: </label>
                 <input id="planName" type="text" name="name" placeholder="Plan Name" />
                 <label htmlFor="type">Type: </label>
-                <input id="planType" type="text"  name="type" />
+                <select id="planType"  name="type">
+                    <option value="1">Lift Plan</option>
+                    <option value="2">Meal Plan</option>
+                </select>
                 <input className="makePlanSubmit" type="submit" value="Make Plan" />
             </form>
     );
@@ -61,13 +64,24 @@ const PlanList = (props) => {
 
     //Will add an if statement(if planType = weight display a dumbell if planType = food display a plate)
     const planNodes = plans.map(plan => {
-        return (
-            <div key={plan.id} className="plan">
-                <img src="/assets/img/domoface.jpeg" alt="domo face" className="domoFace" />
+        if(plan.type == true) 
+            return (
+            <div key={plan.id} className="liftPlan">
+                <img src="/assets/img/lPlan-logo.png" alt="Just-Lift" className="planFace" />
                 <h3 className="planName">Name: {plan.name}</h3>
-                <h3 className="planType">Type: {plan.type}</h3>
+               <h3 className="planType">Type: Lift</h3>
             </div>
-        );
+        ); else {
+            return (
+            <div key={plan.id} className="mealPlan">
+                <img src="/assets/img/mPlan-logo.png" alt="Just-Lift" className="planFace" />
+                <h3 className="planName">Name: {plan.name}</h3>
+               <h3 className="planType">Type: Meal</h3>
+            </div>
+            );
+        }
+
+        
     });
 
     return (
